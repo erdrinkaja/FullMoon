@@ -306,7 +306,7 @@ html, body {
 
 /* Navigation */
 .site-navigation {
-  background-color: black;
+  background-color:  black;
 }
 
 .site-navigation.affix {
@@ -385,7 +385,7 @@ html, body {
   }
   .site-navigation .navbar-toggle .icon-bar {
     position: relative;
-    background-color: #fff;
+    background-color: #333333;
     transition: top 0.25s ease-in-out;
     -moz-transition: top 0.25s ease-in-out;
     -webkit-transition: top 0.25s ease-in-out;
@@ -403,7 +403,7 @@ html, body {
   }
   .site-navigation .navbar-collapse {
     position: relative;
-    background-color: #196fc0;
+    background-color: #333333;
     z-index: 99;
     text-align: center;
     border-top: 0;
