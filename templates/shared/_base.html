@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Pixel Perfect Portfolio</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    {% include 'shared/css.html' %}
+    {% block css %}{% endblock css %}
+
+</head>
+<body>
+{% include 'shared/header.html' %}
+{% block content %}{% endblock content %}
+
+{% include 'shared/footer.html' %}
+{% include 'shared/js.html' %}
+{% block js %}{% endblock js %}
+</body>
+</html>
