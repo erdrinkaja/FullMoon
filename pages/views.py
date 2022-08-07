@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.generic import TemplateView
 
 
@@ -13,3 +12,7 @@ class AboutPage(TemplateView):
 
 class ContactPage(TemplateView):
     template_name = 'pages/contact_page.html'
+
+
+class Event(TemplateView):
+    template_name = 'pages/events.html'

@@ -7,10 +7,16 @@ class Moon(models.Model):
     phase = models.IntegerField()
     day_discription = models.IntegerField()
 
+    class Meta:
+        verbose_name_plural = 'moon'
+
 
 class Events(models.Model):
     event_title = models.CharField(max_length=255)
     event_status = models.IntegerField()
+
+    class Meta:
+        verbose_name_plural = 'events'
 
 
 class MoonPhase(models.Model):
@@ -19,6 +25,9 @@ class MoonPhase(models.Model):
     description_1 = models.TextField()
     description_2 = models.TextField()
     description_3 = models.TextField()
+
+    class Meta:
+        verbose_name_plural = 'moon phase'
 
 
 
