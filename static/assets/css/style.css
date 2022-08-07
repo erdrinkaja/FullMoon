@@ -306,7 +306,7 @@ html, body {
 
 /* Navigation */
 .site-navigation {
-  background-color:  black;
+  background-color: black;
 }
 
 .site-navigation.affix {
@@ -385,7 +385,7 @@ html, body {
   }
   .site-navigation .navbar-toggle .icon-bar {
     position: relative;
-    background-color: #333333;
+    background-color: #fff;
     transition: top 0.25s ease-in-out;
     -moz-transition: top 0.25s ease-in-out;
     -webkit-transition: top 0.25s ease-in-out;
@@ -403,7 +403,7 @@ html, body {
   }
   .site-navigation .navbar-collapse {
     position: relative;
-    background-color: #333333;
+    background-color: black;
     z-index: 99;
     text-align: center;
     border-top: 0;
@@ -630,7 +630,7 @@ html, body {
   display: inline-block;
   content: '';
   height: 1px;
-  background-color: red;
+  background-color: #666;
   width: 20px;
   position: absolute;
   top: 50%;
