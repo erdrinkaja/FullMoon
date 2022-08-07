@@ -2170,6 +2170,7 @@ html, body {
 
 .form-control {
   border: 0;
+  background-color: transparent;
   border-bottom: 1px solid #dddddd;
   box-shadow: none;
   border-radius: 0;
@@ -2182,6 +2183,7 @@ html, body {
 }
 
 textarea.form-control {
+  color: #ffffff;
   margin-top: 50px;
   min-height: 150px;
   resize: none;
@@ -2197,6 +2199,7 @@ textarea.form-control {
   }
   .form-control,
   textarea.form-control {
+    color: #ffffff;
     margin-top: 15px;
   }
 }
