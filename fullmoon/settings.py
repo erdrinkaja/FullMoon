@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
+import pymysql
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from environ import environ
@@ -20,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Inicializon permbajtjen e file-it .env
 env = environ.Env()
 environ.Env.read_env()
+pymysql.install_as_MySQLdb()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -61,8 +64,7 @@ ROOT_URLCONF = 'fullmoon.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,10 +92,23 @@ DATABASES = {
     }
 }
 
+
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'full_moon',
+#         'USER': 'root',
+#         'PASSWORD': '099108015920E.k-2019LURA7ansoer',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
 #     }
 # }
 

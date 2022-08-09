@@ -8,6 +8,9 @@ __pycache__/
 # C extensions
 *.so
 
+#kam bere ndryshime qe jane vetem per mac
+settings.py
+
 # Distribution / packaging
 .Python
 env/

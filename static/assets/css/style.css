@@ -425,7 +425,7 @@ html, body {
 /* HERO
 ================================================== */
 .hero {
-  background: url(../img/moon3.jpeg) center no-repeat;
+  background: url(../img/moon2.jpeg) center no-repeat;
   height: 100%;
   width: 100%;
   display: table;
@@ -598,10 +598,12 @@ html, body {
  * Sections
  */
 .site-section {
+  text-align: center;
   padding: 100px 0;
 }
 
 .site-section h2 {
+
   font-family: "Varela", sans-serif;
   margin: 0;
   font-size: 32px;
