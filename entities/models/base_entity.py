@@ -1,5 +1,3 @@
-# -*- encoding: utf-8 -*-
-__author__ = "Aris Mamo"
 
 import uuid
 

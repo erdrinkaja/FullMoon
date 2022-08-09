@@ -1,5 +1,3 @@
-# -*- encoding: utf-8 -*-
-__author__ = "Aris Mamo"
 
 from django.db import models
 
