@@ -1,6 +1,7 @@
+from django.shortcuts import render
+from entities.models.phase import Phase
 
-from django.views.generic import TemplateView
 
-
-class HomePage(TemplateView):
-    template_name = 'pages/home-page.html'
+def home_page(requet):
+    phases = Phase.objects.all()
+    return render(requet, 'pages/home-page.html', context={'phases': phases})

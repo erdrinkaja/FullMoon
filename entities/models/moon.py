@@ -15,5 +15,3 @@ class Moon(BaseEntity):
 
     def __str__(self):
         return f"{self.valid_date } - {str(self.status)} - {self.phase.title}"
-
-

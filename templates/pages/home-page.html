@@ -1,6 +1,8 @@
 
 {% extends "shared/_base.html" %}
 
+{% load static %}
+
 {% block content %}
     <section class="hero" style="background-image: url(../../media/phases/waxing_cresent.jpeg)">
 
@@ -8,6 +10,14 @@
         <p class="section-subtitle"><span>Here i am</span></p>
         <br/><br/>
         <p class="section-subtitle"><span>Here i am</span></p>
+        {% for phase in phases %}
+            <h2>{{ phase.title }}</h2>
+{#            <h3>{{ movie.description }}</h3>#}
+            <img src="{{ phase.image.url }}">
+{#{            {% if movie.url %}#}
+{#              <a href="{{ movie.url }}">Movie Link</a>#}
+{#        {% endif %}#}
+        {% endfor %}
 
 
     </section><!-- /.section-contact-->

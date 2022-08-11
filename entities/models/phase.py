@@ -1,12 +1,11 @@
 
 from django.db import models
+from django.utils import timezone
+
 
 
 class Phase(models.Model):
     id = models.IntegerField(primary_key=True, editable=True)
-    date_created = models.DateTimeField(auto_now_add=True)
-    date_updated = models.DateTimeField(auto_now=True, null=True)
-    deleted = models.BooleanField(default=False)
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to='phases')
     first_description = models.TextField()
@@ -15,3 +14,5 @@ class Phase(models.Model):
 
     def __str__(self):
         return self.title
+
+
