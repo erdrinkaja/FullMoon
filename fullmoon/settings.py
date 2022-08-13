@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 import environ
+import pymysql
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 from environ import environ
@@ -21,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Inicializon permbajtjen e file-it .env
 env = environ.Env()
 environ.Env.read_env()
+pymysql.install_as_MySQLdb()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
