@@ -1,16 +1,40 @@
-
 {% extends "shared/_base.html" %}
 
 {% load static %}
 
 {% block content %}
-    <section class="hero background-overlay" style="background-image:url({{ img_url }})">
+    <section class="hero" style="background-image:url({{ img_url }})">
 
         <h1 class="section-subtitle" style="color: white">FULL MOON</h1>
-        <br/><br/><br/><br/>
-        <p class="section-subtitle" style="color: white"><span>{{ discription }}</span></p>
-        <br/><br/>
-        <p class="section-subtitle"><span>{{ discription }}</span></p>
+        <div class="container container-fluid">
+            <div class="row" style="margin-top: 2rem">
+                {% for categ in category %}
+                    <div class="col-md-3 col-xs-6">
+                        <div class="team-member">
+                            <div class="flipper">
+                                <div class="team-member-front">
+                                    <div class="team-member-thumb">
+                                        <img src="{{ categ.photo.url }}" class="img-res" alt="">
+                                    </div>  <!-- /.team-member-thumb -->
+                                    <p class="team-member-front-name" style="color: white">{{ categ.title }}</p>
+                                </div><!-- /.team-member-front -->
+
+                                <div class="team-member-back">
+                                    <div class="team-member-back-info">
+                                        <h3 class="team-member-back-name">{{ categ.title }}</h3>
+                                        <br>
+                                        {% for even in categ.events.all %}
+                                            <p class="team-member-back-position"><a href="event-page.html" style="color: white">{{ even.title }}</a></p>
+                                        {% endfor %}
+                                    <h3>----------------------------</h3>
+                                    </div><!-- /.team-member-back-info -->
+                                </div><!-- /.team-member-back -->
+                            </div>
+                        </div><!-- /.team-member -->
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
 
 
     </section><!-- /.section-contact-->
