@@ -1,11 +1,9 @@
 
-
 from django.db import models
 
-from entities.models.base_entity import BaseEntity
 
-
-class Event(BaseEntity):
+class Event(models.Model):
+    id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=255)
     status = models.IntegerField()
 
