@@ -23,8 +23,11 @@
                                     <div class="team-member-back-info">
                                         <h3 class="team-member-back-name">{{ categ.title }}</h3>
                                         <br>
+                                            {% if categ.id == 9 %}
+                                                <p class="team-member-back-position">You can travel whenever you want!!!</p>
+                                            {% endif %}
                                         {% for even in categ.events.all %}
-                                            <p class="team-member-back-position"><a href="event-page.html" style="color: white">{{ even.title }}</a></p>
+                                            <p class="team-member-back-position"><a href="/event/{{ even.id }}" style="color: white">{{ even.title }}</a></p>
                                         {% endfor %}
                                     <h3>----------------------------</h3>
                                     </div><!-- /.team-member-back-info -->

@@ -1,0 +1,54 @@
+{% extends "shared/_base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <section class="hero " style="background-image:url({{ img_url }})">
+
+        <h1 class="section-subtitle" style="color: white">{{ phase.title }}</h1>
+        <br/><br/><br/><br/>
+        <p class="section-subtitle" style="color: white"><span>{{ event.title }}</span></p>
+        <br/><br/>
+        <p class="section-subtitle"><span style="color: white">{{ suggestion }}</span></p>
+        <br/><br/><br/><br/>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <form style="display: inline-block" action="{% url 'website-event-filter-page' id=event.id %}"  method="post" id="checkForm">
+                    {% csrf_token %}
+                    <input type="date" name="checkDate" id="checkDate" class="form-control" style="color: white">
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+
+{% block js %}
+    <script>
+        $(function(ev) {
+            $("#checkDate").on('change', (el) => {
+                if(!$("#checkDate").val()) {
+                    alert("Please choose a valid date!")
+                    return
+                }
+                document.forms.checkForm.submit();
+            });
+        })
+    </script>
+{% endblock js %}
+
+{% block css %}
+    <style>
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 2px;
+            opacity: 0.9;
+            filter: invert(0.8);
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator:hover {
+            opacity: 1
+        }
+    </style>
+{% endblock %}

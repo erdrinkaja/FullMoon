@@ -4,7 +4,7 @@ from entities.models.moon import Moon
 from datetime import datetime
 
 
-def home_page(requet):
+def home_page(request):
     moon = Moon.objects.filter(valid_date=datetime.now().date())[0]
     phase_id = moon.phase_id
     phase = Phase.objects.filter(pk=phase_id)[0]
@@ -18,4 +18,4 @@ def home_page(requet):
     else:
         description = phase.third_description
 
-    return render(requet, 'pages/home-page.html', context={'img_url': moon_img_url, 'description': description, 'title': title })
+    return render(request, 'pages/home-page.html', context={'img_url': moon_img_url, 'description': description, 'title': title })
