@@ -11,6 +11,16 @@
         <p class="section-subtitle" style="color: white"><span>{{ title }}</span></p>
         <br/><br/>
         <p class="section-subtitle" style="color: whitesmoke"><span>{{ description }}</span></p>
+        <br/><br/>
+        <p class="section-subtitle" style="color: whitesmoke"><span>Today event in Your favor: </span></p>
+        <p class="section-subtitle" style="color: whitesmoke"><span>{{ ev_in_favor }}</span></p>
+        <br/><br/>
+        <p class="section-subtitle" style="color: whitesmoke"><span>Today event in disfavor: </span></p>
+        <p class="section-subtitle" style="color: whitesmoke"><span>{{ ev_in_disfavor }}</span></p>
+            <br/><br/>
+        <p class="section-subtitle" style="color: whitesmoke"><a href="{% url 'website-event-discript-page'  %}" style="color: whitesmoke">For more sugestion on diferent event click here!... </a></p>
+
+
 
 
     </section><!-- /.section-contact-->
