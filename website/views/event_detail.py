@@ -42,7 +42,7 @@ def event_detail_for_date(request, id):
     if status_id == event.status:
         suggestion = "This day, the position of the moon is in your favor. \n If you would like to consider a different date, click the above button."
     else:
-        suggestion = "This day, the position of the moon is not in your favor"
+        suggestion = "This day, the position of the moon is not in your favor. \n If you would like to consider a different date, click the above button."
 
     return render(request, 'pages/event-page-detail.html',
                   context={'phase': phase ,'img_url': moon_img_url, 'event': event, 'suggestion': suggestion})
